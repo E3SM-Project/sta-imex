@@ -24,8 +24,8 @@ chooseIMEX(which);
 %for loglog spacing
 %not really courant number, this is k_x*dt and k_z*dt,
 %csound is used in plotting
-coux=logspace(-4,.1,100);
-couz=logspace(-4,2,100);
+coux=logspace(-4,.1,400);
+couz=logspace(-4,2,400);
 
 
 tt=length(couz);
