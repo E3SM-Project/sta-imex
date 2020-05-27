@@ -49,3 +49,6 @@ in Lock2014 with ~Courant numbers for axes.
 
 lock_plotting_new plots stability diagram using acoustics-gravity system as
 in Lock2014 with dx,dt for axes.
+
+nlev_convergence plots stability diagrams for varying dz.
+
