@@ -91,11 +91,8 @@ colormap([1 1 1; ...
     0.3406    0.8008    0.4789;...
     0.2440    0.4358    0.9988]);
 
-%NN=NLEVset(end:-1:1);
-%mm3=mm2;
-%mm3(:,1:nnl)=mm2(:,end:-1:1);
 
-pcolor(NLEVset,DTset,mm2);
+pcolor(dzset,DTset,mm2);
 %shading faceted;
 shading flat;
 
@@ -108,11 +105,11 @@ set(cb,'ticks',tticks)
 title('$\max(|\lambda|)-1$','Interpreter','latex')
 
 ylabel('$\Delta t$ (sec)','Interpreter','latex')
-xlabel('$n_{\rm {lev}}$','Interpreter','latex')
+%xlabel('$n_{\rm {lev}}$','Interpreter','latex')
+xlabel('$\Delta z$ (m)','Interpreter','latex')
 
-%set(gca,'XTick',[1,2,4,10,25,50,100])
-set(gca,'XTick',[20 40 57 80 100]);
-%set(gca,'XTick',2*[100, 125, 175, 250, 500])
+%set(gca,'XTick',[20 40 57 80 100]);
+set(gca,'XTick',[100, 125, 175, 250, 500])
 set(gca,'YTick',[1,2,4,8,10,16,20]);
 
 
