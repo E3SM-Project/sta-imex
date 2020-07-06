@@ -1,6 +1,4 @@
-clear all;
-
-%merging script save_... so that only 1 script is run for dispersion
+%clear all;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% for these use 20 levels only and
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% original k as in dispersion plot
@@ -20,9 +18,9 @@ wavenumber=360*40/12;
 mlev=20;
 
 %which IMEX scheme
-which=10104;
+%which=10105;
 
-DT=300;
+DT=50;
 
 global_space;
 global_space_imex;

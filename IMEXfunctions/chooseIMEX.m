@@ -48,22 +48,22 @@ elseif(which==10096)
 %ttype 9 experimental
     paper10096;    
 elseif(which==10100)
-%original ttype 10 S4
+%original ttype 10 S4 , M2a
     paper10100;
 elseif(which==10101)
-%modif ttype 10 Feb 01
+%modif ttype 10 Feb 01, M2b
     paper10101;
 elseif(which==10102)
-%modif ttype 10 AS version
+%modif ttype 10 AS version, M2c
     paper10102;
 elseif(which==10103)
-%ttype 10 with last BE
+%ttype 10 with last BE, M2be
     paper10103;
 elseif(which==10104)
-%ttype 10 with last CN
+%ttype 10 with last CN, M2cn
     paper10104;
 elseif(which==10105)
-%ttype 10 with last CN+offcenter
+%ttype 10 with last CN+offcenter, M2cno
     paper10105; 
 elseif(which==10106)
 %experimental
@@ -78,7 +78,7 @@ elseif(which==10030)
 %S3 scheme on webpage, M1 scheme in paper
     paper10030;
 elseif(which==10060)
-%S6 scheme on webpage, M2 scheme in paper
+%S6 scheme on webpage
     paper10060;
 
 end

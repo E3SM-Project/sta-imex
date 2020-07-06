@@ -1,6 +1,6 @@
 %Lock's system but Thuburn's plot
 
-clear all;
+%clear all;
 
 oldpath=path;
 path(oldpath,'IMEXfunctions/')
@@ -15,7 +15,7 @@ wavenumber=180;
 mlev=72;
 
 %which IMEX scheme
-which=10030;
+%which=10030;
 
 figure(10000+which);
 
@@ -30,8 +30,8 @@ figure(10000+which);
 %DTset=1/2* (1.4).^ibdt ;
 
 
-resset=logspace(log10(30),log10(3500),100);
-DTset=logspace(log10(0.5),log10(400),100);
+resset=logspace(log10(30),log10(3500),nnx);
+DTset=logspace(log10(0.5),log10(400),nnz);
 ll=length(resset);
 tt=length(DTset);
 

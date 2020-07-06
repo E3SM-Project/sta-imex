@@ -1,4 +1,4 @@
-clear all;
+%clear all;
 
 oldpath=path;
 path(oldpath,'IMEXfunctions/')
@@ -9,18 +9,18 @@ global wavenumber mlev which resolution D;
 wavenumber=180;
 
 %which IMEX scheme
-which=10101;
+%which=10101;
 
 res=1111; %in NE, 3 km for EC=40e6 m
 resolution=res;
 
 %DTset=logspace(log10(0.5),log10(10),10); %works for res=1500
-DTset=logspace(log10(1),log10(10),100); %works for res=1500
+DTset=logspace(log10(1),log10(10),nndt); %works for res=1500
 %DTset=[7];
 tt=length(DTset);
 
 %NLEVset=[300];
-NLEVset=round(logspace(log10(20),log10(100),50))
+NLEVset=round(logspace(log10(20),log10(100),nndz))
 NLEVset=unique(NLEVset)
 
 nnl=length(NLEVset);

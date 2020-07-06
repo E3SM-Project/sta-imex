@@ -20,35 +20,42 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 %%%%%%%%%%%%%%% README
 
 plot_omega is used to plot eigenvalues of spatial discretizations \omega. 
-This plot will have 3 branches of waves just like in TW2005. 
+This plot will have 3 branches of waves. 
 
-If custom number of vertical levels is used (not 20), then first one needs to 
+If custom number of vertical levels is used (not 20, 72, or 128), 
+then first one needs to 
 run findHommeDispersion to find solutions m of eqn tan(m*D)=2*m/(B-A) .
 These m values need to be recorded in script kvals_load .
-Script findHommeDispersion also solves for analytical values \omega for 3 branches of waves 
+Script findHommeDispersion also solves for analytical values \omega 
+for 3 branches of waves 
 (by solving quintic eqn numerically). 
-One can tune that script for analytical branches as solutions for \omega 
-depend on initial interval (the script is tuned for 20 levels, not 72 or 128).
+One can adjust that script for analytical branches as solutions for \omega 
+depend on initial interval (the script is set for 20 levels, not 72 or 128).
 
-plot_stability plots (dx,dt) white-blue stability plot for a particular 
-IMEX scheme. By default for horizontal wavenumber k it takes 2dx wave
+plot_stability plots (T_x,dt) white-blue stability plot for a particular 
+IMEX scheme for system of normal modes. 
+By default for horizontal wavenumber k it takes 2dx wave
 and it uses homme conventions to denote hor. resolutions.
+
+lock_plotting_courant_axes plots stability diagram using acoustics-gravity system as
+in Lock2014 with relations of Courant numbers for axes.
+
+lock_plotting_new plots stability diagram using acoustics-gravity system as
+in Lock2014 with (T_x,dt) for axes.
 
 IMEX methods and auxiliary functions are in folder IMEXfunctions.
 
 dispersion_dissipation4 is used to plot amplification factors and numerical
 \omega for IMEX method based on spatial discretizetion as in plot_omega. 
-Before using dispersion_dissipation3, one needs to save spatial discretization
-(by running plot_omega) for desired vertical levels. 
-plot_omega, dispersion_dissipation, and save_5wave... use original value 
+Before using dispersion_dissipation4, one needs to save spatial discretization
+(by running plot_omega) for desired vertical levels.
+For dispersion/dissipation plots, download 
+Cao, Y.: Munkres Assignment Algorithm, https://www.mathworks.com/matlabcentral/fileexchange/20328-munkres-assignment-algorithm
+
+ 
+plot_omega, dispersion_dissipation4, and save_5wave... use original value 
 of horizontal wavenumber k, as in TW2005
 (but this can be changed).
-
-lock_plotting_courant_axes plots stability diagram using acoustics-gravity system as
-in Lock2014 with ~Courant numbers for axes.
-
-lock_plotting_new plots stability diagram using acoustics-gravity system as
-in Lock2014 with dx,dt for axes.
 
 nlev_convergence plots stability diagrams for varying dz.
 

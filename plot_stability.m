@@ -1,5 +1,5 @@
 %plot IMEx stability plot using dx,dt for axes, our most used plot
-clear all;
+%clear all;
 
 oldpath=path;
 path(oldpath,'IMEXfunctions/')
@@ -15,13 +15,13 @@ wavenumber=180;
 mlev=72;
 
 %which IMEX scheme
-which=10103;
+%which=10103;
 
 figure(20000000+which);
 
  
-%%%%%%%% PAPER
-resset=logspace(log10(30),log10(3500),100); %high res 3000,
+%%%%%%%% PAPER, resset is in NE, homme notations for hor. res.
+resset=logspace(log10(30),log10(3500),nnx); %high res 3000,
 %coarse
 %resset=logspace(log10(30),log10(3500),30); %high res 3000,
 ll=length(resset);
@@ -31,7 +31,7 @@ ll=length(resset);
 %DTset=1/2* (1.4).^ibdt ;
 
 %%%%%%%%%PAPER
-DTset=logspace(log10(0.5),log10(400),100);
+DTset=logspace(log10(0.5),log10(400),nnz);
 %coarse
 %DTset=logspace(log10(0.5),log10(400),30);
 tt=length(DTset);

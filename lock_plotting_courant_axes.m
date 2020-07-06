@@ -1,7 +1,7 @@
 %stability plot
 %Lock's system but Thuburn's plot with dx,dt axes
 
-clear all;
+%clear all;
 
 oldpath=path;
 path(oldpath,'IMEXfunctions/')
@@ -16,7 +16,7 @@ cr2=1.0045e+05; %copied from thuburn's file
 imm=complex(0,1);
 
 %which IMEX scheme
-which=10030;
+%which=10030;
 figure(200000+which);
 
 chooseIMEX(which);
@@ -24,8 +24,8 @@ chooseIMEX(which);
 %for loglog spacing
 %not really courant number, this is k_x*dt and k_z*dt,
 %csound is used in plotting
-coux=logspace(-4,.1,400);
-couz=logspace(-4,2,400);
+coux=logspace(-4,.1,nnx);
+couz=logspace(-4,2,nnz);
 
 
 tt=length(couz);
