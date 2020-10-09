@@ -7,33 +7,6 @@ function chooseIMEX(which)
 
 if(which==0)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEFORE PAPER
-    ARS;
-elseif(which==1)
-    ttype7;
-elseif(which==13)
-    ttype13;    
-elseif(which==2)
-    s1s2;
-elseif(which==3)
-    s3;
-elseif(which==4)
-    s4;
-elseif(which==5)
-    s5;
-elseif(which==6)
-    s6;
-elseif(which==7)
-    s7;
-elseif(which==53)
-    s53;
-elseif(which==54)
-    s54;
-elseif(which==301)
-    s301;
-elseif(which==302)
-    s302;
-elseif(which==303)
-    s303;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PAPER NOTATIONS 
 elseif(which==10090)
 %original ttype 9      s53
@@ -68,12 +41,17 @@ elseif(which==10105)
 elseif(which==10106)
 %experimental
     paper10106;    
+    
 elseif(which==10232)
 %ARK2(2,3,2) as in Rokhzadi2018
     paper10232;
+elseif(which==102321)
+%ARK2(2,3,2) different version, with a32=0.85
+    paper102321;
 elseif(which==10532)
 %developed scheme in Rokhzadi2018 imex-ssp2(2,3,2)
     paper10532;
+
 elseif(which==10030)
 %S3 scheme on webpage, M1 scheme in paper
     paper10030;

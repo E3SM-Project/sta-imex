@@ -18,47 +18,56 @@ plot_omega
 %Figure 2a, M1 method, acoustic system with (kx,kz)*dt axes
 clear all; global which; which=10030;
 %high res plot as in paper
-nnx=400; nnz=400;
+%nnx=400; nnz=400;
 %low res plot
-%nnx=40; nnz=40;
+nnx=40; nnz=40;
 lock_plotting_courant_axes
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Figure 2b, M1 method, acoustic system with (T_x,dt) axes
 clear all; global which; which=10030;
 %high res plot as in paper
-nnx=100; nnz=100;
+%nnx=100; nnz=100;
 %low res plot
-%nnx=20; nnz=20;
+nnx=20; nnz=20;
 lock_plotting_new
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Figure 2c, M1 method, system of normal modes with (T_x,dt) axes
 clear all; global which; which=10030;
 %high res plot as in paper
-nnx=100; nnz=100;
+%nnx=100; nnz=100;
 %low res plot
-%nnx=20; nnz=20;
+nnx=20; nnz=20;
 plot_stability
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Figure 3a, ARK2(2,3,2) method, system of normal modes with (T_x,dt) axes
+%Figure 3a, ARK2(2,3,2)(1) method, system of normal modes with (T_x,dt) axes
 clear all; global which; which=10232;
 %high res plot as in paper
-nnx=100; nnz=100;
+%nnx=100; nnz=100;
 %low res plot
-%nnx=20; nnz=20;
+nnx=20; nnz=20;
 plot_stability
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Figure 3b, IMEX-SSP2(2,3,2) method, system of normal modes with (T_x,dt) axes
+%Figure 3b, ARK2(2,3,2)(2) method, system of normal modes with (T_x,dt) axes
+clear all; global which; which=102321;
+%high res plot as in paper
+%nnx=100; nnz=100;
+%low res plot
+nnx=20; nnz=20;
+plot_stability
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Figure 3c, IMEX-SSP2(2,3,2) method, system of normal modes with (T_x,dt) axes
 clear all; global which; which=10532;
 %high res plot as in paper
 nnx=100; nnz=100;
 %low res plot
-%nnx=20; nnz=20;
+nnx=20; nnz=20;
 plot_stability
 
 
@@ -78,7 +87,7 @@ clear all; global which; which=10101;
 %high res plot as in paper
 nnx=100; nnz=100;
 %low res plot
-%nnx=20; nnz=20;
+nnx=20; nnz=20;
 plot_stability
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -87,7 +96,7 @@ clear all; global which; which=10102;
 %high res plot as in paper
 nnx=100; nnz=100;
 %low res plot
-%nnx=20; nnz=20;
+nnx=20; nnz=20;
 plot_stability
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -113,7 +122,7 @@ clear all; global which; which=10103;
 %high res plot as in paper
 nnx=100; nnz=100;
 %low res plot
-%nnx=20; nnz=20;
+nnx=20; nnz=20;
 plot_stability
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -122,7 +131,7 @@ clear all; global which; which=10104;
 %high res plot as in paper
 nnx=100; nnz=100;
 %low res plot
-%nnx=20; nnz=20;
+nnx=20; nnz=20;
 plot_stability
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -131,7 +140,7 @@ clear all; global which; which=10105;
 %high res plot as in paper
 nnx=100; nnz=100;
 %low res plot
-%nnx=20; nnz=20;
+nnx=20; nnz=20;
 plot_stability
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -157,23 +166,32 @@ clear all; global which; which=10030;
 %high res plot as in paper
 nndt=100; nndz=50;
 %low res plot
-%nndt=20; nndz=20;
+nndt=20; nndz=20;
 nlev_convergence
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Figure 6b, ARK2(2,3,2) method, convergence wrt dz
+%Figure 6b, ARK2(2,3,2)(2) method, convergence wrt dz
 clear all; global which; which=10232;
 %high res plot as in paper
 nndt=100; nndz=50;
 %low res plot
-%nndt=20; nndz=20;
+nndt=20; nndz=20;
 nlev_convergence
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Figure 6c, M2b method, convergence wrt dz
+%Figure 6c, ARK2(2,3,2)(2) method, convergence wrt dz
+clear all; global which; which=102321;
+%high res plot as in paper
+nndt=100; nndz=50;
+%low res plot
+nndt=20; nndz=20;
+nlev_convergence
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Figure 6d, M2b method, convergence wrt dz
 clear all; global which; which=10101;
 %high res plot as in paper
 nndt=100; nndz=50;
 %low res plot
-%nndt=20; nndz=20;
+nndt=20; nndz=20;
 nlev_convergence
